@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Roboto+Condensed&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header id="main-header">
+      <img src="images/namelogo.png" id="namelogo" height=60px>
+      <div id="nav">
+        <a href="index.html">home</a>
+        <a href="concept.html">concept</a>
+        <a href="contributions.html">my work</a>
+      </div>
+    </header>
+
+    <section id="concept">
+      <img src="images/group.jpg" id="header-img" width=100%>
+      <h1>CONCEPT</h1>
+    </section>
+
+    <section id="concept-content">
+      <img src="images/logo.png" id="fittable" width= 500px>
+      <div id="fittable-text">
+        <p class="ftext">Fittable is a smart table top that aims to improve posture through the use of LED lights and an advanced feedback system. The primary objective of Fittable is to encourage users to consistently participate in postural shifts through active breaks and to gain an overall better awareness of posture. The focal point of the project is not on strict body alignment, but rather encouraging movement as a form of active break.</p>
+
+        <p class="ftext">The table top can be fitted onto any existing surface and set up however preferred. A wireless token system is used to facilitate the breaks. The tokens should be placed at different areas of the space at varying distances from the user. These tokens will light up one after another at different time intervals until the final token, accompanied with a vibrating notification, signifies to the user that they should engage in a passive break.</p>
+
+        <p class="ftext">An activity meter on the table top measures how active the user is. When inactive, the meter will turn red and when active the meter will turn green. The LCD screen displays digital cues as further prompt to actively engage with the tokens.</p>
+
+      </div>
+
+      <div id="fittable-img">
+        <img src="images/fittable.png" id="concept-img" width= 600px>
+      </div>
+
+    </section>
+
+    <section id="technologies">
+      <h2>TECHNOLOGIES</h2>
+      <div id="tech-imgs">
+
+        <div class="tech" id="esp32">
+          <img src="images/esp32.png" id="" width= 120px>
+          <p class="tech-text">The ESP32 is the main component behind the token system with wifi and bluetooth features</p>
+        </div>
+
+        <div class="tech" id="pir">
+          <img src="images/pir.png" id="" width= 120px>
+          <p class="tech-text">This PIR motion sensor detects movement from the upper body and is responsible for the activity meter
+          functionalities</p>
+        </div>
+
+        <div class="tech" id="arduino">
+          <img src="images/arduino.png" id="" width= 120px>
+          <p class="tech-text">The Arduino is responsible for powering the activity meter and ensuring its functionality</p>
+        </div>
+
+      </div>
+
+      <div id="tech-img2">
+        <div class="tech" id="led">
+          <img src="images/led.png" id="" width= 60px>
+          <p class="tech-text">LEDs and NeoPixel rings were used to light up the activity meter and tokens for an ambient effect</p>
+        </div>
+
+        <div class="tech" id="vmotor">
+          <img src="images/vibration_motor.png" id="" width= 80px>
+          <p class="tech-text">The vibration motor was used to send a vibrating notification to the user signalling
+          that they should take a passive break</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>PRODUCT GALLERY</h2>
+
+      <!-- gallery code from: https://www.w3schools.com/howto/howto_js_lightbox.asp -->
+      <!-- Images used to open the lightbox -->
+      <div class="row">
+        <div class="column">
+          <img src="images/table.png" onclick="openModal();currentSlide(1)" class="hover-shadow" width=200px>
+        </div>
+        <div class="column">
+          <img src="images/token.png" onclick="openModal();currentSlide(2)" class="hover-shadow" width=200px>
+        </div>
+        <div class="column">
+          <img src="images/DSC04855.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" width=200px>
+        </div>
+        <div class="column">
+          <img src="images/IMG_3204.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" width=200px>
+        </div>
+      </div>
+
+      <!-- The Modal/Lightbox -->
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+          <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="images/table.png" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="images/token.png" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="images/DSC04855.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="images/IMG_3204.jpg" style="width:100%">
+          </div>
+
+          <!-- Next/previous controls -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <!-- Caption text -->
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <!-- Thumbnail image controls -->
+          <div class="column">
+            <img class="demo" src="images/table.png" onclick="currentSlide(1)" alt="Courtesy of India Anderson" width=200px>
+          </div>
+
+          <div class="column">
+            <img class="demo" src="images/token.png" onclick="currentSlide(2)" alt="Courtesy of India Anderson" width=200px>
+          </div>
+
+          <div class="column">
+            <img class="demo" src="images/DSC04855.jpg" onclick="currentSlide(3)" alt="Courtesy of India Anderson" width=200px>
+          </div>
+
+          <div class="column">
+            <img class="demo" src="images/IMG_3204.jpg" onclick="currentSlide(4)" alt="" width=200px>
+          </div>
+        </div>
+      </div>
+
+      <!-- end of derived code -->
+      <p id="credit">Photographs by Judit Losh and India Anderson 2019</p>
+    </section>
+
+    <script src="js/concept.js"></script
+
+  </body>
+</html>
